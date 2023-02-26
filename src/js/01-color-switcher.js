@@ -18,6 +18,7 @@ const refs = {
   stop: document.querySelector('button[data-stop]'),
 };
 const delay = 1000;
+colorInterval = null;
 refs.start.disabled = false;
 
 refs.start.addEventListener('click', changeColor);
