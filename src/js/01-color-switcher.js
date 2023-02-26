@@ -19,7 +19,7 @@ function changeColor() {
   startBtn.disabled = true;
   stopBtn.disabled = false;
   idInterval = setInterval(() => {
-    document.body.style.background = getRandomHexColor();
+    document.body.style.backgroundColor = getRandomHexColor();
   }, 1000);
 }
 
