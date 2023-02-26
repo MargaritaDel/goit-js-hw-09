@@ -9,7 +9,7 @@
 const startBtn = document.querySelector('button[data-start]');
 const stopBtn = document.querySelector('button[data-stop]');
 
-colorInterval = null;
+let idInterval = null;
 startBtn.disabled = false;
 
 startBtn.addEventListener('click', changeColor);
@@ -18,7 +18,7 @@ stopBtn.addEventListener('click', ClearChangeColor);
 function changeColor() {
   startBtn.disabled = true;
   stopBtn.disabled = false;
-  colorInterval = setInterval(() => {
+  idInterval = setInterval(() => {
     document.body.style.background = getRandomHexColor();
   }, 1000);
 }
@@ -26,7 +26,7 @@ function changeColor() {
 function ClearChangeColor() {
   stopBtn.disabled = true;
   startBtn.disabled = false;
-  clearInterval(colorInterval);
+  clearInterval(idInterval);
 }
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
